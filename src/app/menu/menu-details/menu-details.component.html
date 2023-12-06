@@ -1,0 +1,12 @@
+<div class="text-center">
+    <h1>{{ product.name }}</h1>
+    <img src="{{product.pic}}" alt="" width="400px">
+    <br>
+    <br>
+    <p class="description"><b>{{ product.description}}</b></p>
+    <h2>{{ product.price}}€</h2>
+    
+    <button routerLink="/menu" class="btn btn-warning">Back to Menu</button>
+    &nbsp;
+    <button (click)="AddItem()" class="btn btn-success">Add to cart</button>
+<br>

@@ -1,0 +1,68 @@
+import { Iproducts } from "./iproducts";
+
+export const product: Iproducts[] = [
+    {name: "Minestrone",
+    price: 8,
+    pic: "/assets/images/minestrone.jpg",
+    description: "A hearty Italian soup made with vegetables, beans, and your choice of pasta or rice. Served with a sprinkle of Parmesan cheese on top.",
+    availability:true, 
+    qtty: 1,
+    },
+
+   {name: "Mushroom Risotto",
+    price:15,   
+    pic:"assets/images/risotto.jpg",
+    description: "Another classic Italian dish made with arborio rice cooked in a broth with mushrooms, white wine, and parmesan cheese. Seasonal.",
+    availability:false,
+    qtty: 1,
+    }, 
+
+    {name: "Pasta with Fresh Pesto",
+    price: 12,
+    pic: "assets/images/pesto.jpg",
+    description: "A classic Italian dish. Fresh basil, garlic, olive oil, and pine nuts are all blended together to make a creamy, flavorful sauce. Served with fettuccine pasta.",
+    availability:true,
+    qtty: 1,   
+    },   
+
+    {name: "Margherita Pizza",
+    price: 10,
+    pic:"assets/images/pizza.jpg",
+    description:"Simple, classic pizza made with fresh dough and topped with home-stewed tomato sauce, mozarella cheese and fresh oregano.",
+    availability:true,
+    qtty: 1,
+    }, 
+
+    {name: "House Salad",
+    price: 8,
+    pic:"assets/images/salad.jpg",
+    description:"Our house salad is a meal on its own! Made with mixed greens, tomatoes, cucumbers, bell peppers and topped with garlic croutons.",
+    availability: true,
+    qtty: 1,
+    }, 
+
+    {name: "Shrimp Pasta",
+    price: 16,
+    pic:"assets/images/shrimp_pasta.jpg",
+    description: "Another delicious Italian dish. The shrimp is sautéed in garlic and olive oil, then tossed with pasta and a light tomato sauce. Topped with a sprinkle of Grana Padano and fresh pepper.",
+    availability: true,
+    qtty: 1,
+    },  
+    
+    {name: "Tiramisu",
+    price: 5,
+    pic:"assets/images/tiramisu.jpg",
+    description:"Layers of sponge cake soaked in espresso and creamy mascarpone cheese and topped with cocoa powder. The perfect balance of sweet and rich flavors.",
+    availability:true,
+    qtty: 1,
+    },  
+    
+    {name: "Gelato",
+    price:5,
+    pic:"/assets/images/gelato.jpg",
+    description:"Smooth and creamy classic gelato local produced. Ask for your favorite flavor. Only available in summer.",
+    availability: false,
+    qtty: 1,
+    },
+    
+    ]

@@ -1,0 +1,27 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Fasthand&display=swap');
+
+.card {
+    margin: 20px;
+    border: dotted black;
+    text-align: center;
+    background-color: lightgrey;
+
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-column-gap: 10px;
+}
+
+h1 {
+    font-family: fasthand;;
+}
+
+
+
+@media screen and (max-width: 600px) { 
+
+  .card { margin-left: 25%; }  
+  
+  }

@@ -1,0 +1,22 @@
+
+<h1 class="text-center">OUR MENU</h1>
+<br>
+<div class="container">
+<div *ngFor ="let product of products; let id = index ">
+  
+  <div class="card" style="width: 15rem;">
+      <img src="{{product.pic}}" class="card-img-top" height="125" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{ product.name}}</h5>
+        
+
+        <div *ngIf="product.availability==true; else info">
+          <p>{{product.price}}€</p>
+          <hr>
+        <button routerLink="/details/{{id}}" class= "btn btn-info">Details</button>&nbsp;
+        <button (click)="addItem(id)" class="btn btn-success">Add to cart</button>
+        </div>
+    </div>
+</div>
+<ng-template #info> <p><i>seasonal</i></p><hr><p class="text-danger">Not availabile</p></ng-template>
+</div>

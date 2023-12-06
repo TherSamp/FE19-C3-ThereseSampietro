@@ -1,0 +1,72 @@
+<div *ngIf="products.length > 0 ; else info">
+<table class="table bg dark">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Price</th>
+        <th scope="col">Quantity</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+
+    <tbody *ngFor="let product of products; let id = index">
+      <tr>
+        <th scope="row">{{ id }}</th>
+        <td>{{ product.name }}</td>
+        <td>{{ product.price }}€</td>
+        <td>{{ product.qtty }}</td>
+        <td><button (click) ="onDeleteItem(id)" class="btn btn-danger">delete</button></td>
+      </tr>
+    </tbody>
+  </table>
+<br> <br><br>
+  <div class="Bill" *ngIf="subtotal < 40; else discount">
+      <table>
+        <tr>
+          <td>Subtotal</td>
+          <td>{{subtotal.toFixed(2)}}€</td>
+        </tr>
+        <tr>
+          <td>+10% Service</td>
+          <td>{{((subtotal*10)/100).toFixed(2)}}€</td>
+        </tr>
+        <hr>
+        <tr>
+          <th>TOTAL</th>
+          <th>{{((subtotal*110)/100).toFixed(2)}}€</th>
+        </tr>
+      </table>
+    </div>
+</div>
+  <ng-template #discount>
+    <div class="Bill" >
+      <table>
+        <tr>
+          <td>Subtotal</td>
+          <td>{{subtotal.toFixed(2)}}€</td>
+        </tr>
+        <tr>
+          <td>Big Spender Discount (15%) &nbsp;</td>
+          <td>-{{((subtotal*15)/100).toFixed(2)}}€</td>
+        </tr>
+        <hr>
+        <tr>
+          <td>New Subtotal</td>
+          <td>{{((subtotal*85)/100).toFixed(2)}}€</td>
+        </tr>
+        <tr>
+          <td>+10% Service</td>
+          <td>{{((subtotal*85)/1000).toFixed(2)}}€</td>
+        </tr>
+        <hr>
+        <tr>
+          <th>TOTAL</th>
+          <th>{{((subtotal*935)/1000).toFixed(2)}}€</th>
+        </tr>
+      </table>
+    </div>
+  </ng-template>
+  <div class="emptyCart">
+  <ng-template #info> <h3 class="text-center">Your cart is empty!</h3></ng-template>
+</div>

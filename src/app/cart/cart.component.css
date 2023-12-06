@@ -1,0 +1,13 @@
+.Bill {
+ display: flex;
+ justify-content: center;
+}
+
+.Bill th {
+    font-size: x-large;
+}
+
+.emptyCart {
+    height:60vh;
+}
+
